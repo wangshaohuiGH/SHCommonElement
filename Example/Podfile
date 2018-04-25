@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SHCommonElement_Example' do
+  pod 'SHCommonElement', :path => '../'
+
+  target 'SHCommonElement_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

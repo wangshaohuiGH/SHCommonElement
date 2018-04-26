@@ -94,7 +94,7 @@
 }
 
 
-- (void)setLayerCornerRadius:(CGFloat)cornerRadius
+- (void)sh_setLayerCornerRadius:(CGFloat)cornerRadius
                  borderWidth:(CGFloat)borderWidth
                  borderColor:(UIColor *)borderColor {
     self.layer.cornerRadius = cornerRadius;
@@ -139,22 +139,22 @@
     self.layer.shouldRasterize = YES;
 }
 
-- (void)setCornerRadius:(CGFloat)radius {
-    [self setCornerRadius:radius BorderColor:nil BorderWidth:0];
+- (void)sh_setCornerRadius:(CGFloat)radius {
+    [self sh_setCornerRadius:radius BorderColor:nil BorderWidth:0];
 }
 
 
-- (void)setCornerRadius:(CGFloat)radius BorderColor:(UIColor *)borderColor BorderWidth:(CGFloat)borderWidth {
-    [self setRoundingCorners:UIRectCornerTopLeft|UIRectCornerTopRight|UIRectCornerBottomLeft|UIRectCornerBottomRight radius:radius borderColor:borderColor borderWidth:borderWidth];
+- (void)sh_setCornerRadius:(CGFloat)radius BorderColor:(UIColor *)borderColor BorderWidth:(CGFloat)borderWidth {
+    [self sh_setRoundingCorners:UIRectCornerTopLeft|UIRectCornerTopRight|UIRectCornerBottomLeft|UIRectCornerBottomRight radius:radius borderColor:borderColor borderWidth:borderWidth];
 }
 
 
-- (void)setRoundingCorners:(UIRectCorner)corners radius:(CGFloat)radius {
-    [self setRoundingCorners:corners radius:radius borderColor:nil borderWidth:0];
+- (void)sh_setRoundingCorners:(UIRectCorner)corners radius:(CGFloat)radius {
+    [self sh_setRoundingCorners:corners radius:radius borderColor:nil borderWidth:0];
 }
 
 
-- (void)setRoundingCorners:(UIRectCorner)corners radius:(CGFloat)radius borderColor:(UIColor *)borderColor borderWidth:(CGFloat)borderWidth {
+- (void)sh_setRoundingCorners:(UIRectCorner)corners radius:(CGFloat)radius borderColor:(UIColor *)borderColor borderWidth:(CGFloat)borderWidth {
     
     
     CGSize viewSize = self.frame.size;

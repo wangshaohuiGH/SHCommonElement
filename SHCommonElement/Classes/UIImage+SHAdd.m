@@ -178,7 +178,7 @@
  *
  *  @return 生成的高清的UIImage
  */
-+ (UIImage *)creatNonInterpolatedUIImageFormCIImage:(CIImage *)image withSize:(CGFloat)size
++ (UIImage *)sh_creatNonInterpolatedUIImageFormCIImage:(CIImage *)image withSize:(CGFloat)size
 {
     CGRect extent = CGRectIntegral(image.extent);
     CGFloat scale = MIN(size/CGRectGetWidth(extent), size/CGRectGetHeight(extent));

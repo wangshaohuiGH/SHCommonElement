@@ -10,7 +10,7 @@
 
 @implementation UIColor (SH_HexRGB)
 
-+ (UIColor *)SH_colorFromHexRGB:(NSString *)inColorString
++ (UIColor *)sh_colorFromHexRGB:(NSString *)inColorString
 {
     UIColor *result = nil;
     unsigned int colorCode = 0;
@@ -32,7 +32,7 @@
     return result;
 }
 
-+ (UIColor *)SH_colorWithHexString:(NSString *)color alpha:(CGFloat)alpha {
++ (UIColor *)sh_colorWithHexString:(NSString *)color alpha:(CGFloat)alpha {
     //删除字符串中的空格
     NSString *cString = [[color stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] uppercaseString];
     // String should be 6 or 8 characters
@@ -73,7 +73,7 @@
     return [UIColor colorWithRed:((float)r / 255.0f) green:((float)g / 255.0f) blue:((float)b / 255.0f) alpha:alpha];
 }
 
-+ (UIColor *)SH_colorWithHexString:(NSString *)color {
++ (UIColor *)sh_colorWithHexString:(NSString *)color {
     if ([color hasPrefix:@"0X"]) {
         color = [color substringFromIndex:2];
     }
@@ -92,15 +92,15 @@
         [[NSScanner scannerWithString:aString] scanHexInt:&a];
         float alpha = (float)a / 255.0f;
         color = [color substringFromIndex:2];
-        return [self SH_colorWithHexString:color alpha:alpha];
+        return [self sh_colorWithHexString:color alpha:alpha];
     }
     
     else {
-        return [self SH_colorWithHexString:color alpha:1.0f];
+        return [self sh_colorWithHexString:color alpha:1.0f];
     }
 }
 
-+ (UIColor *)SH_colorWithFromColor:(UIColor *)fromColor toColor:(UIColor *)toColor proportion:(CGFloat)proportion
++ (UIColor *)sh_colorWithFromColor:(UIColor *)fromColor toColor:(UIColor *)toColor proportion:(CGFloat)proportion
 {
     if (proportion <= 0.f) {
         return fromColor;

@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   #库名
   s.name             = 'SHCommonElement'
   #库版本
-  s.version          = '0.0.1'
+  s.version          = '0.0.2'
   #库简短描述
   s.summary          = 'SHCommonElement pod Use'
   #库详细描述

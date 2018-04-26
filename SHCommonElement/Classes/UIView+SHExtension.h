@@ -35,21 +35,31 @@
  */
 @property (nonatomic, strong) UIColor *layerBorderColor;
 
-- (void)setLayerCornerRadius:(CGFloat)cornerRadius
+
+/**设置圆角*/
+- (void)sh_setCornerRadius:(CGFloat )radius;
+
+/**
+ 设置圆角
+ 
+ @param cornerRadius 圆角半径
+ @param borderWidth 切线宽度
+ @param borderColor 切线颜色
+ */
+- (void)sh_setLayerCornerRadius:(CGFloat)cornerRadius
                  borderWidth:(CGFloat)borderWidth
                  borderColor:(UIColor *)borderColor;
 
 
-/**设置圆角*/
-- (void)setCornerRadius:(CGFloat )radius;
+
 
 /**设置圆角和边框*/
-- (void)setCornerRadius:(CGFloat)radius BorderColor:(UIColor *)borderColor BorderWidth:(CGFloat )borderWidth;
+- (void)sh_setCornerRadius:(CGFloat)radius BorderColor:(UIColor *)borderColor BorderWidth:(CGFloat )borderWidth;
 
 /**设置任意圆角*/
-- (void)setRoundingCorners:(UIRectCorner)corners radius:(CGFloat)radius;
+- (void)sh_setRoundingCorners:(UIRectCorner)corners radius:(CGFloat)radius;
 
 /**设置任意圆角和边框*/
-- (void)setRoundingCorners:(UIRectCorner)corners radius:(CGFloat)radius borderColor:(UIColor *)borderColor borderWidth:(CGFloat )borderWidth;
+- (void)sh_setRoundingCorners:(UIRectCorner)corners radius:(CGFloat)radius borderColor:(UIColor *)borderColor borderWidth:(CGFloat )borderWidth;
 
 @end

@@ -37,7 +37,6 @@ TODO: SHCommonElement pod Use.
   s.public_header_files = 'SHCommonElement/Classes/*.h'
   #系统框架依赖
   s.frameworks = 'UIKit'
-  #第三方框架依赖
-  s.dependency 'AFNetworking', '~> 3.1.0'
+  
 
 end

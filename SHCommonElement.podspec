@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   #库名
   s.name             = 'SHCommonElement'
   #库版本
-  s.version          = '0.0.2'
+  s.version          = '0.0.3'
   #库简短描述
   s.summary          = 'SHCommonElement pod Use'
   #库详细描述
@@ -37,5 +37,7 @@ TODO: SHCommonElement pod Use.
   s.public_header_files = 'SHCommonElement/Classes/*.h'
   #系统框架依赖
   s.frameworks = 'UIKit'
+  #第三方框架依赖
+  s.dependency 'AFNetworking', '~> 3.1.0'
 
 end

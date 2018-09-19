@@ -16,6 +16,9 @@
 
 #define SH_HEXCOLOR(hex) [UIColor colorWithRed:((float)((hex & 0xFF0000) >> 16)) / 255.0 green:((float)((hex & 0xFF00) >> 8)) / 255.0 blue:((float)(hex & 0xFF)) / 255.0 alpha:1]
 
+/** 弱引用 */
+#define WeakSelf(weakSelf)  __weak __typeof(&*self)weakSelf = self;
+
 #define kWindow [[UIApplication sharedApplication].delegate window]
 
 /** 屏幕宽度 */
@@ -31,11 +34,13 @@
 
 #define iPhone8P ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(414, 736), [UIScreen mainScreen].bounds.size) : NO)
 
-#define iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(375, 812), [UIScreen mainScreen].bounds.size) : NO)
+#define iPhoneX_S ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(375, 812), [UIScreen mainScreen].bounds.size) : NO)
+
+#define iPhoneXR_Max ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(414, 896), [UIScreen mainScreen].bounds.size) : NO)
 
 
 /** 逐一设备适配 */
-#define kFitiPhone_SE_8_8P_X_O(x,y,n,m,k)   (iPhoneX ? m : (iPhone8P ? n : (iPhone8 ? y : (iPhoneSE ? x : k))))
+#define kFitiPhone_SE_8_8P_X_M_iPad(x,y,n,m,k,j)   (iPhoneXR_Max ? k : (iPhoneX_S ? m : (iPhone8P ? n : (iPhone8 ? y : (iPhoneSE ? x : j)))))
 
 /** 根据iPhone8进行比例缩放 */
 #define kFitScaleW(width) (width*kScreenW/375)
@@ -47,5 +52,11 @@
 
 
 #define kNavigationHeight (kStatusBarH + 44)
+
+#ifdef DEBUG
+#define NSLog(FORMAT, ...) fprintf(stderr,"%s:%d\t%s\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+#else
+#define NSLog(...)
+#endif
 
 #endif /* CommonUtils_h */

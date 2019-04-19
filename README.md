@@ -1,9 +1,11 @@
 # SHCommonElement
 
-项目常用
+项目category库
 
 
 ## Update Record
+
+2019.04.19 -- 新增类目
 
 2018.09.19 -- 完善CommonUtils_h内容
 

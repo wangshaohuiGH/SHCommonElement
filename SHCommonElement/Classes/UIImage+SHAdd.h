@@ -230,6 +230,6 @@
  @return image
  */
 
-+ (UIImage *)tabBarItemImageUrl:(NSString *)imageUrl;
++ (UIImage *_Nullable)tabBarItemImageUrl:(NSString *_Nullable)imageUrl;
 
 @end

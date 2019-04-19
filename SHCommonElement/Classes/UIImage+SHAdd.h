@@ -113,5 +113,11 @@
  */
 + (UIImage *)sh_QRCodeImageForString:(NSString *)string ImageSize:(CGFloat)imagesize LogoImage:(UIImage *)logoImage LogoSize:(CGFloat)logoSize;
 
-
+/**
+ 动态更换tabbar icon
+ 
+ @param imageUrl imageUrl
+ @return image
+ */
++ (UIImage *)tabBarItemImageUrl:(NSString *)imageUrl;
 @end

@@ -263,5 +263,48 @@
     return newPic;
 }
 
-
++ (UIImage *)tabBarItemImageUrl:(NSString *)imageUrl {
+    
+    NSArray *stringArr = [imageUrl componentsSeparatedByString:@"/"];
+    NSString *imageName = stringArr.lastObject;
+    NSString *name = [[imageName componentsSeparatedByString:@"."] firstObject];
+    imageName = [NSString stringWithFormat:@"%@@3x.png",name];
+    NSString *path = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory,NSUserDomainMask,YES) lastObject];
+    NSLog(@"%@",path);
+    
+    NSString *iconFilePath = [path stringByAppendingPathComponent:@"tabbarIcon"];
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSString *fullPath = [iconFilePath stringByAppendingPathComponent:imageName];
+    
+    // 判断文件是否已存在，存在直接读取
+    if ([[NSFileManager defaultManager] fileExistsAtPath:fullPath]) {
+        NSLog(@"tabbarIcon已经存在,直接本地缓存并返回");
+        return [UIImage imageWithContentsOfFile:fullPath];
+    }
+    //获取iconFilePath下文件个数
+    NSArray *subPathArr = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:iconFilePath error:nil];
+    //超过8个说明icon需要更换清除iconFilePath文件
+    if (subPathArr.count > 10) {
+        [fileManager removeItemAtPath:iconFilePath error:nil];
+    }
+    //再从新创建iconFilePath文件
+    BOOL isDir = NO;
+    // fileExistsAtPath 判断一个文件或目录是否有效，isDirectory判断是否一个目录
+    BOOL existed = [fileManager fileExistsAtPath:iconFilePath isDirectory:&isDir];
+    if ( !(isDir == YES && existed == YES) ) {
+        // 在 Caches 目录下创建一个 tabbarIcon 目录
+        [fileManager createDirectoryAtPath:iconFilePath withIntermediateDirectories:YES attributes:nil error:nil];
+    }
+    
+    NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:imageUrl]];
+    UIImage *image = [UIImage imageWithData:data];
+    // 将image写入沙河
+    if ( [UIImagePNGRepresentation(image) writeToFile:fullPath atomically:YES]) {
+        return [UIImage imageWithContentsOfFile:fullPath];
+        
+    }else
+    {
+        return nil;
+    }
+}
 @end

@@ -39,4 +39,5 @@
 #import "NSNotificationCenter+SHAdd.h"
 #import "UIGestureRecognizer+SHAdd.h"
 #import "UIFont+Addition.h"
+
 #endif /* CommonElement_h */

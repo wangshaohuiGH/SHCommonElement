@@ -32,4 +32,11 @@
 #import "UIView+SHExtension.h"
 #import "UINavigationController+SHFullscreenPopGesture.h"
 
+
+#import "NSDecimalNumber+SHAdd.h"
+#import "NSMutableArray+SHAdd.h"
+#import "NSMutableDictionary+SHAdd.h"
+#import "NSNotificationCenter+SHAdd.h"
+#import "UIGestureRecognizer+SHAdd.h"
+#import "UIFont+Addition.h"
 #endif /* CommonElement_h */

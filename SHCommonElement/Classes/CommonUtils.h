@@ -38,6 +38,8 @@
 
 #define iPhoneXR_Max ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(414, 896), [UIScreen mainScreen].bounds.size) : NO)
 
+/** iphoneX及以后的手机  */
+#define iPhoneX (UIScreen.mainScreen.bounds.size.width >= 375.f && UIScreen.mainScreen.bounds.size.height >= 812.f)
 
 /** 逐一设备适配 */
 #define kFitiPhone_SE_8_8P_X_M_iPad(x,y,n,m,k,j)   (iPhoneXR_Max ? k : (iPhoneX_S ? m : (iPhone8P ? n : (iPhone8 ? y : (iPhoneSE ? x : j)))))

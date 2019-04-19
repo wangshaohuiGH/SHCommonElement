@@ -7,7 +7,10 @@
 //
 
 #import "SHViewController.h"
+
 #import "CommonElement.h"
+
+
 @interface SHViewController ()
 
 @end
@@ -17,6 +20,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSLog(@"当前设备屏幕宽高：%@",NSStringFromCGSize([UIScreen mainScreen].bounds.size));
 	// Do any additional setup after loading the view, typically from a nib.
 }
 

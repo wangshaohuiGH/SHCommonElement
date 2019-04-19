@@ -34,6 +34,7 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark - 归档和反归档
 + (void) keyedArchiverObject:(id)object ForKey:(NSString *)key ToFile:(NSString *)path;
 + (NSArray *) keyedUnArchiverForKey:(NSString *)key FromFile:(NSString *)path;
+
 #pragma mark - About Class
 ///=============================================================================
 /// @name About Class

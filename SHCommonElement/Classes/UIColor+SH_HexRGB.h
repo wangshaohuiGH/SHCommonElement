@@ -18,6 +18,9 @@
 
 + (UIColor *)sh_colorWithFromColor:(UIColor *)fromColor toColor:(UIColor *)toColor proportion:(CGFloat)proportion;
 
+
+/** 4.19 新增 */
+
 + (UIColor *)colorWithHex:(UInt32)hex;
 + (UIColor *)colorWithHex:(UInt32)hex andAlpha:(CGFloat)alpha;
 + (UIColor *)colorWithHexString:(NSString *)hexString;
@@ -31,4 +34,5 @@
 + (UIColor *)colorWithWholeRed:(CGFloat)red
                          green:(CGFloat)green
                           blue:(CGFloat)blue;
+
 @end

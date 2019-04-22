@@ -274,6 +274,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  * 获取 name 文件里的内容，返回 NSData。类似[UIImage imageNamed:]。
+ * 需要自己加上文件的后缀  name:xxx.json
  */
 + (nullable NSData *)dataNamed:(NSString *)name;
 @end

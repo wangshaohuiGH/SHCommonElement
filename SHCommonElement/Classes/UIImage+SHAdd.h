@@ -119,6 +119,84 @@
  */
 + (nullable UIImage *)imageWithSize:(CGSize)size drawBlock:(void (^)(CGContextRef context))drawBlock;
 
+
+/**
+ Rounds a new image with a given corner size.
+ 
+ @param radius  The radius of each corner oval. Values larger than half the
+ rectangle's width or height are clamped appropriately to half
+ the width or height.
+ */
+- (nullable UIImage *)imageByRoundCornerRadius:(CGFloat)radius;
+
+/**
+ Rounds a new image with a given corner size.
+ 
+ @param radius       The radius of each corner oval. Values larger than half the
+ rectangle's width or height are clamped appropriately to
+ half the width or height.
+ 
+ @param borderWidth  The inset border line width. Values larger than half the rectangle's
+ width or height are clamped appropriately to half the width
+ or height.
+ 
+ @param borderColor  The border stroke color. nil means clear color.
+ */
+- (nullable UIImage *)imageByRoundCornerRadius:(CGFloat)radius
+                                   borderWidth:(CGFloat)borderWidth
+                                   borderColor:(nullable UIColor *)borderColor;
+
+/**
+ Rounds a new image with a given corner size.
+ 
+ @param radius       The radius of each corner oval. Values larger than half the
+ rectangle's width or height are clamped appropriately to
+ half the width or height.
+ 
+ @param corners      A bitmask value that identifies the corners that you want
+ rounded. You can use this parameter to round only a subset
+ of the corners of the rectangle.
+ 
+ @param borderWidth  The inset border line width. Values larger than half the rectangle's
+ width or height are clamped appropriately to half the width
+ or height.
+ 
+ @param borderColor  The border stroke color. nil means clear color.
+ 
+ @param borderLineJoin The border line join.
+ */
+- (nullable UIImage *)imageByRoundCornerRadius:(CGFloat)radius
+                                       corners:(UIRectCorner)corners
+                                   borderWidth:(CGFloat)borderWidth
+                                   borderColor:(nullable UIColor *)borderColor
+                                borderLineJoin:(CGLineJoin)borderLineJoin;
+/**
+ Returns a new rotated image (relative to the center).
+ 
+ @param radians   Rotated radians in counterclockwise.⟲
+ 
+ @param fitSize   YES: new image's size is extend to fit all content.
+ NO: image's size will not change, content may be clipped.
+ */
+- (nullable UIImage *)imageByRotate:(CGFloat)radians fitSize:(BOOL)fitSize;
+
+/**
+ Returns a new image rotated counterclockwise by a quarter‑turn (90°). ⤺
+ The width and height will be exchanged.
+ */
+- (nullable UIImage *)imageByRotateLeft90;
+
+/**
+ Returns a new image rotated clockwise by a quarter‑turn (90°). ⤼
+ The width and height will be exchanged.
+ */
+- (nullable UIImage *)imageByRotateRight90;
+
+
+
+
+
+#pragma mark ---- 新增
 /**
  通过颜色获取一张宽高都为1px的图片
 

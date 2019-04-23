@@ -38,4 +38,8 @@
 #import "NSNotificationCenter+SHAdd.h"
 #import "UIGestureRecognizer+SHAdd.h"
 #import "UIFont+Addition.h"
+
+#import "UIView+SHBadgeView.h"
+#import "UIViewController+SHImagePicker.h"
+
 #endif /* CommonElement_h */

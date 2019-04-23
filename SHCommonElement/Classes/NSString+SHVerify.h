@@ -48,6 +48,8 @@
  */
 - (BOOL)isValidateUrl;
 
++(BOOL)validateUrlString:(NSString*)urlString;
+
 #pragma mark --------------数字和字母
 
 /**
@@ -114,4 +116,11 @@
  */
 - (BOOL)isValidateNumberByRegExp;
 
+/**
+ 银行卡判断
+ 
+ @param cardNumber cardcode
+ @return return value description
+ */
++ (BOOL)isValidateBankCard:(NSString *)cardNumber;
 @end

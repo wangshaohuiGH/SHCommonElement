@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
-@interface UIView (UIViewController)
+@interface UIView (SHGetController)
 
 /**
  *  获取当前控制器

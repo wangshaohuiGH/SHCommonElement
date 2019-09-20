@@ -42,7 +42,7 @@
 #define iPhoneX (UIScreen.mainScreen.bounds.size.width >= 375.f && UIScreen.mainScreen.bounds.size.height >= 812.f)
 
 /** 逐一设备适配 */
-#define kFitiPhone_SE_8_8P_X_M_iPad(x,y,n,m,k,j)   (iPhoneXR_Max ? k : (iPhoneX_S ? m : (iPhone8P ? n : (iPhone8 ? y : (iPhoneSE ? x : j)))))
+#define kFitiPhone_SE_8_8P_X_M_O(x,y,n,m,k,j)   (iPhoneXR_Max ? k : (iPhoneX_S ? m : (iPhone8P ? n : (iPhone8 ? y : (iPhoneSE ? x : j)))))
 
 /** 根据iPhone8进行比例缩放 */
 #define kFitScaleW(width) (width*kScreenW/375)

@@ -1,5 +1,5 @@
 //
-//  UIFont+Addition.h
+//  UIFont+SHAdd.h
 //  DLKJ
 //
 //  Created by wangsh on 2018/11/27.
@@ -10,16 +10,16 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UIFont (Addition)
+@interface UIFont (SHAdd)
 
 /** 默认字体 PingFangSC-Regular */
-+ (UIFont *)dl_fontWithSize:(CGFloat )size;
++ (UIFont *)sh_fontWithSize:(CGFloat )size;
 /**  PingFangSC-Semibold */
-+ (UIFont *)dl_boldFontWithSize:(CGFloat )size;
++ (UIFont *)sh_boldFontWithSize:(CGFloat )size;
 /**  PingFangSC-Medium */
-+ (UIFont *)dl_mediumFontWithSize:(CGFloat )size;
++ (UIFont *)sh_mediumFontWithSize:(CGFloat )size;
 /**  PingFangSC-Semibold */
-+ (UIFont *)dl_semiboldFontWithSize:(CGFloat )size;
++ (UIFont *)sh_semiboldFontWithSize:(CGFloat )size;
 
 /**
  设置字体
@@ -28,7 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param size 字体大小
  @return font
  */
-+ (UIFont *)dl_mainFontWithName:(NSString *)name Size:(CGFloat )size;
++ (UIFont *)sh_mainFontWithName:(NSString *)name Size:(CGFloat )size;
 @end
 
 NS_ASSUME_NONNULL_END

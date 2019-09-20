@@ -28,17 +28,17 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  在主线程创建一个通知发送。（如果现在不在主线程，则异步创建发送通知）
  *
- *  @param aName    用来生成新通知的通知名称
- *  @param anObject 通知携带的对象
+ *  @param name    用来生成新通知的通知名称
+ *  @param object 通知携带的对象
  */
 - (void)postNotificationOnMainThreadWithName:(NSString *)name
                                       object:(nullable id)object;
 /**
  *  在主线程创建一个通知发送。（如果现在不在主线程，则异步创建发送通知）
  *
- *  @param aName     用来生成新通知的通知名称
- *  @param anObject  通知携带的对象
- *  @param aUserInfo 通知携带的用户信息
+ *  @param name     用来生成新通知的通知名称
+ *  @param object  通知携带的对象
+ *  @param userInfo 通知携带的用户信息
  */
 - (void)postNotificationOnMainThreadWithName:(NSString *)name
                                       object:(nullable id)object

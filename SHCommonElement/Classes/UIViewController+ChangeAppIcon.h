@@ -1,5 +1,5 @@
 //
-//  UIViewController+RemoveAlartView.h
+//  UIViewController+ChangeAppIcon.h
 //  SimpleShop
 //
 //  Created by wangsh on 2019/4/10.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UIViewController (RemoveAlartView)
+@interface UIViewController (ChangeAppIcon)
 
 
 /**

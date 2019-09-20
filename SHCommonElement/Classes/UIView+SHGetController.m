@@ -1,14 +1,14 @@
 //
-//  UIView+UIViewController.m
+//  UIView+SHGetController.m
 //  Installment
 //
 //  Created by Apple on 15/11/20.
 //  Copyright © 2015年 熊彬. All rights reserved.
 //
 
-#import "UIView+UIViewController.h"
+#import "UIView+SHGetController.h"
 
-@implementation UIView (UIViewController)
+@implementation UIView (SHGetController)
 
 - (UIViewController *)viewController
 {

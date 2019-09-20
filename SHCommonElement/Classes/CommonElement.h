@@ -11,35 +11,49 @@
 
 #import "CommonUtils.h"
 
-#import "UIColor+SH_HexRGB.h"
-#import "NSDate+SHAdd.h"
-#import "NSDictionary+SHAdd.h"
 #import "NSArray+SHAdd.h"
-#import "NSObject+SHAdd.h"
+
+#import "NSBundle+AppLanguageSwitch.h"
+
 #import "NSData+SHAdd.h"
-#import "NSNumber+SHAdd.h"
-#import "NSString+SHAdd.h"
-#import "NSString+SHVerify.h"
-
-
-#import "UIView+SH_Toast.h"
-#import "UIImage+SHAdd.h"
-#import "WKWebView+SHAdd.h"
-#import "UIWebView+SHAdd.h"
-#import "SHWebViewProtocol.h"
-#import "UIButton+SHAdd.h"
-#import "UIView+SHExtension.h"
-#import "UINavigationController+SHFullscreenPopGesture.h"
+#import "NSDate+SHAdd.h"
 
 
 #import "NSDecimalNumber+SHAdd.h"
+#import "NSDictionary+SHAdd.h"
 #import "NSMutableArray+SHAdd.h"
 #import "NSMutableDictionary+SHAdd.h"
 #import "NSNotificationCenter+SHAdd.h"
+
+#import "NSNumber+SHAdd.h"
+#import "NSObject+SHAdd.h"
+
+#import "NSString+SHAdd.h"
+#import "NSString+SHVerify.h"
+
+#import "SHWebViewProtocol.h"
+
+#import "UIButton+SHAdd.h"
+
+#import "UIColor+SH_HexRGB.h"
+
+#import "UIFont+SHAdd.h"
+
 #import "UIGestureRecognizer+SHAdd.h"
-#import "UIFont+Addition.h"
+
+#import "UIImage+SHAdd.h"
+#import "UIImage+HTRoundImage.h"
+
+#import "UIImageView+HTRoundImage.h"
 
 #import "UIView+SHBadgeView.h"
+#import "UIView+SHGetController.h"
+#import "UIView+SHExtension.h"
+#import "UIView+SH_Toast.h"
+
 #import "UIViewController+SHImagePicker.h"
+#import "UIViewController+ChangeAppIcon.h"
+
+#import "WKWebView+SHAdd.h"
 
 #endif /* CommonElement_h */

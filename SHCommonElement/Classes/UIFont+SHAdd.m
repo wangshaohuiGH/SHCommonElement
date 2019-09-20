@@ -1,37 +1,37 @@
 //
-//  UIFont+Addition.m
+//  UIFont+SHAdd.m
 //  DLKJ
 //
 //  Created by wangsh on 2018/11/27.
 //  Copyright © 2018年 李宇廷. All rights reserved.
 //
 
-#import "UIFont+Addition.h"
+#import "UIFont+SHAdd.h"
 
-@implementation UIFont (Addition)
+@implementation UIFont (SHAdd)
 
 
-+ (UIFont *)dl_fontWithSize:(CGFloat)size {
++ (UIFont *)sh_fontWithSize:(CGFloat)size {
     
    
-    return [self dl_mainFontWithName:[self dl_mainFontName] Size:size];
+    return [self sh_mainFontWithName:[self sh_mainFontName] Size:size];
     
 }
-+ (UIFont *)dl_boldFontWithSize:(CGFloat )size {
++ (UIFont *)sh_boldFontWithSize:(CGFloat )size {
     
-    return [self dl_mainFontWithName:[self dl_mainBoldFontName] Size:size];
+    return [self sh_mainFontWithName:[self sh_mainBoldFontName] Size:size];
 }
-+ (UIFont *)dl_mediumFontWithSize:(CGFloat )size {
++ (UIFont *)sh_mediumFontWithSize:(CGFloat )size {
     
-    return [self dl_mainFontWithName:[self dl_mainMediumFontName] Size:size];
-}
-
-+ (UIFont *)dl_semiboldFontWithSize:(CGFloat )size {
-    
-    return [self dl_mainFontWithName:[self dl_mainSemiboldFontName] Size:size];
+    return [self sh_mainFontWithName:[self sh_mainMediumFontName] Size:size];
 }
 
-+ (UIFont *)dl_mainFontWithName:(NSString *)name Size:(CGFloat )size {
++ (UIFont *)sh_semiboldFontWithSize:(CGFloat )size {
+    
+    return [self sh_mainFontWithName:[self sh_mainSemiboldFontName] Size:size];
+}
+
++ (UIFont *)sh_mainFontWithName:(NSString *)name Size:(CGFloat )size {
     CGFloat w = [UIScreen mainScreen].bounds.size.width;
     if (w == 414) {
         size = size + 1;
@@ -41,7 +41,7 @@
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 9.0) {
         UIFont *font = [UIFont fontWithName:name size:size];
         if (!font) {
-            if ([name isEqualToString:[self dl_mainBoldFontName]]) {
+            if ([name isEqualToString:[self sh_mainBoldFontName]]) {
                 font = [UIFont boldSystemFontOfSize:size];
             }else {
                 font =[UIFont systemFontOfSize:size];
@@ -49,7 +49,7 @@
         }
         return font;
     }else {
-        if ([name isEqualToString:[self dl_mainBoldFontName]]) {
+        if ([name isEqualToString:[self sh_mainBoldFontName]]) {
             return [UIFont boldSystemFontOfSize:size];
         }else {
             return [UIFont systemFontOfSize:size];
@@ -58,16 +58,16 @@
     }
 }
 
-+ (NSString *)dl_mainFontName {
++ (NSString *)sh_mainFontName {
     return @"PingFangSC-Regular";
 }
-+ (NSString *)dl_mainBoldFontName {
-    return @"PingFang-SC-Semibold";
++ (NSString *)sh_mainBoldFontName {
+    return @"PingFang-SC-Bold";
 }
-+ (NSString *)dl_mainMediumFontName {
++ (NSString *)sh_mainMediumFontName {
     return @"PingFang-SC-Medium";
 }
-+ (NSString *)dl_mainSemiboldFontName {
++ (NSString *)sh_mainSemiboldFontName {
     return @"PingFang-SC-Semibold";
 }
 + (void)allFontFamily {

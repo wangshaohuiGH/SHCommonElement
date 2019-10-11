@@ -22,12 +22,12 @@
 #pragma mark - Public Methods
 
 /**调起相册*/
-- (void)showPhotoLibrary
-{
+- (void)showPhotoLibrary {
     UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
     imagePickerController.delegate = self;
     imagePickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     imagePickerController.allowsEditing = self.allowsEditing;
+    imagePickerController.modalPresentationStyle = UIModalPresentationFullScreen;
     [[NSOperationQueue mainQueue] addOperationWithBlock:^{
         [self.viewController presentViewController:imagePickerController animated:YES completion:nil];
     }];
@@ -40,6 +40,7 @@
     imagePickerController.delegate = self;
     imagePickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
     imagePickerController.allowsEditing = self.allowsEditing;
+    imagePickerController.modalPresentationStyle = UIModalPresentationFullScreen;
     [[NSOperationQueue mainQueue] addOperationWithBlock:^{
         [self.viewController presentViewController:imagePickerController animated:YES completion:nil];
     }];

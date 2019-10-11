@@ -13,7 +13,6 @@
 
 #import "NSArray+SHAdd.h"
 
-#import "NSBundle+AppLanguageSwitch.h"
 
 #import "NSData+SHAdd.h"
 #import "NSDate+SHAdd.h"
@@ -52,7 +51,7 @@
 #import "UIView+SH_Toast.h"
 
 #import "UIViewController+SHImagePicker.h"
-#import "UIViewController+ChangeAppIcon.h"
+
 
 #import "WKWebView+SHAdd.h"
 

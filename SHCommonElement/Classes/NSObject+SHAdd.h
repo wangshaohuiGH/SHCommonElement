@@ -103,8 +103,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (BOOL)swizzleClassMethod:(SEL)originalSel with:(SEL)newSel;
 
 
-//获取当前屏幕显示的viewcontroller
-- (UIViewController *)getCurrentViewController;
+
 
 @end
 NS_ASSUME_NONNULL_END

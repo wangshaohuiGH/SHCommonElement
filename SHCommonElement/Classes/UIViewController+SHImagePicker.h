@@ -35,6 +35,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)sh_cameraWithAllowsEditing:(BOOL)allowsEditing completed:(SHImagePickerCompleted)completed;
 
+
+
+/// 获取当前控制器
+- (UIViewController *)getCurrentViewController;
+
 @end
 
 NS_ASSUME_NONNULL_END

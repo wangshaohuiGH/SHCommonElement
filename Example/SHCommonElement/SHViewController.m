@@ -30,9 +30,7 @@
 	// Do any additional setup after loading the view, typically from a nib.
 }
 - (void)click {
-    [self sh_photoLibraryWithAllowsEditing:NO completed:^(NSDictionary * _Nonnull info) {
-        NSLog(@"%@",info);
-    }];
+    
 
 }
 - (void)didReceiveMemoryWarning

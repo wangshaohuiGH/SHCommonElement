@@ -50,8 +50,7 @@
 #import "UIView+SHExtension.h"
 #import "UIView+SH_Toast.h"
 
-//#import "UIViewController+SHImagePicker.h"
-
+#import "UIViewController+SHImagePicker.h"
 
 #import "WKWebView+SHAdd.h"
 

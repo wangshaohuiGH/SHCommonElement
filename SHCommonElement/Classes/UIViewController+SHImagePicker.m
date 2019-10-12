@@ -2,10 +2,11 @@
 //  UIViewController+SHImagePicker.m
 //  Pods-SHCommonElement_Example
 //
-//  Created by wangsh on 2019/4/23.
+//  Created by wangsh on 2019/10/12.
 //
 
 #import "UIViewController+SHImagePicker.h"
+
 #import <AVFoundation/AVFoundation.h>
 #import <objc/runtime.h>
 #import "UIView+SH_Toast.h"
@@ -271,3 +272,4 @@ typedef void (^_SHPickCompleted)(UIImage *img, NSData *data);
     return result;
 }
 @end
+

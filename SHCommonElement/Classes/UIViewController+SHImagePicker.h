@@ -2,14 +2,15 @@
 //  UIViewController+SHImagePicker.h
 //  Pods-SHCommonElement_Example
 //
-//  Created by wangsh on 2019/4/23.
+//  Created by wangsh on 2019/10/12.
 //
+
 
 #import <UIKit/UIKit.h>
 
-typedef void (^SHImagePickerCompleted)(NSDictionary * _Nonnull info);
-
 NS_ASSUME_NONNULL_BEGIN
+
+typedef void (^SHImagePickerCompleted)(NSDictionary * _Nonnull info);
 
 @interface UIViewController (SHImagePicker)
 

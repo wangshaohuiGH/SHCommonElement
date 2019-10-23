@@ -1,0 +1,16 @@
+PODS:
+  - SHCommonElement (0.1.4)
+
+DEPENDENCIES:
+  - SHCommonElement (from `../`)
+
+EXTERNAL SOURCES:
+  SHCommonElement:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SHCommonElement: 5046bcc89c71c35b1cc996c352c0be315d6d975b
+
+PODFILE CHECKSUM: df207a6d18d39991851c6a1a2d4b88bc7d5eb204
+
+COCOAPODS: 1.6.1

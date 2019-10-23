@@ -1,0 +1,24 @@
+{
+  "name": "SHCommonElement",
+  "version": "0.1.4",
+  "summary": "SHCommonElement pod Use",
+  "description": "TODO: SHCommonElement pod Use.",
+  "homepage": "https://github.com/wangshaohuiGH",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "wangsh": "wangshaohui_get@163.com"
+  },
+  "source": {
+    "git": "https://github.com/wangshaohuiGH/SHCommonElement.git",
+    "tag": "0.1.4"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "SHCommonElement/Classes/**/*",
+  "public_header_files": "SHCommonElement/Classes/*.h",
+  "frameworks": "UIKit"
+}

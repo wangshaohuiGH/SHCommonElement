@@ -1,0 +1,6 @@
+framework module SHCommonElement {
+  umbrella header "SHCommonElement-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -2,7 +2,7 @@
 //  UIView+Toast.m
 //  Toast
 //
-//  Copyright (c) 2011-2016 Charles Scalesse.
+//  Copyright (c) 2011-2017 Charles Scalesse.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a
 //  copy of this software and associated documentation files (the
@@ -27,9 +27,10 @@
 #import <QuartzCore/QuartzCore.h>
 #import <objc/runtime.h>
 
-NSString * CSToastPositionTop       = @"CSToastPositionTop";
-NSString * CSToastPositionCenter    = @"CSToastPositionCenter";
-NSString * CSToastPositionBottom    = @"CSToastPositionBottom";
+// Positions
+NSString * CSToastPositionTop                       = @"CSToastPositionTop";
+NSString * CSToastPositionCenter                    = @"CSToastPositionCenter";
+NSString * CSToastPositionBottom                    = @"CSToastPositionBottom";
 
 // Keys for values associated with toast views
 static const NSString * CSToastTimerKey             = @"CSToastTimerKey";
@@ -45,7 +46,7 @@ static const NSString * CSToastQueueKey             = @"CSToastQueueKey";
 @interface UIView (ToastPrivate)
 
 /**
- These private methods are being prefixed with "cs_" to reduce the likelihood of non-obvious 
+ These private methods are being prefixed with "cs_" to reduce the likelihood of non-obvious
  naming conflicts with other UIView methods.
  
  @discussion Should the public API also use the cs_ prefix? Technically it should, but it
@@ -110,22 +111,39 @@ static const NSString * CSToastQueueKey             = @"CSToastQueueKey";
     }
 }
 
-#pragma mark - Hide Toast Method
+#pragma mark - Hide Toast Methods
 
-- (void)hideToasts {
-    for (UIView *toast in [self cs_activeToasts]) {
-        [self hideToast:toast];
-    }
+- (void)hideToast {
+    [self hideToast:[[self cs_activeToasts] firstObject]];
 }
 
 - (void)hideToast:(UIView *)toast {
     // sanity
     if (!toast || ![[self cs_activeToasts] containsObject:toast]) return;
     
-    NSTimer *timer = (NSTimer *)objc_getAssociatedObject(toast, &CSToastTimerKey);
-    [timer invalidate];
-    
     [self cs_hideToast:toast];
+}
+
+- (void)hideAllToasts {
+    [self hideAllToasts:NO clearQueue:YES];
+}
+
+- (void)hideAllToasts:(BOOL)includeActivity clearQueue:(BOOL)clearQueue {
+    if (clearQueue) {
+        [self clearToastQueue];
+    }
+    
+    for (UIView *toast in [self cs_activeToasts]) {
+        [self hideToast:toast];
+    }
+    
+    if (includeActivity) {
+        [self hideToastActivity];
+    }
+}
+
+- (void)clearToastQueue {
+    [[self cs_toastQueue] removeAllObjects];
 }
 
 #pragma mark - Private Show/Hide Methods
@@ -162,6 +180,9 @@ static const NSString * CSToastQueueKey             = @"CSToastQueueKey";
 }
     
 - (void)cs_hideToast:(UIView *)toast fromTap:(BOOL)fromTap {
+    NSTimer *timer = (NSTimer *)objc_getAssociatedObject(toast, &CSToastTimerKey);
+    [timer invalidate];
+    
     [UIView animateWithDuration:[[CSToastManager sharedStyle] fadeDuration]
                           delay:0.0
                         options:(UIViewAnimationOptionCurveEaseIn | UIViewAnimationOptionBeginFromCurrentState)
@@ -196,7 +217,7 @@ static const NSString * CSToastQueueKey             = @"CSToastQueueKey";
 
 - (UIView *)toastViewForMessage:(NSString *)message title:(NSString *)title image:(UIImage *)image style:(CSToastStyle *)style {
     // sanity
-    if(message == nil && title == nil && image == nil) return nil;
+    if (message == nil && title == nil && image == nil) return nil;
     
     // default to the shared style
     if (style == nil) {
@@ -356,7 +377,6 @@ static const NSString * CSToastQueueKey             = @"CSToastQueueKey";
 - (void)makeToastActivity {
     [self makeToastActivity:CSToastPositionCenter];
 }
-
 - (void)makeToastActivity:(id)position {
     // sanity
     UIView *existingActivityView = (UIView *)objc_getAssociatedObject(self, &CSToastActivityViewKey);
@@ -403,11 +423,11 @@ static const NSString * CSToastQueueKey             = @"CSToastQueueKey";
                               delay:0.0
                             options:(UIViewAnimationOptionCurveEaseIn | UIViewAnimationOptionBeginFromCurrentState)
                          animations:^{
-                             existingActivityView.alpha = 0.0;
-                         } completion:^(BOOL finished) {
-                             [existingActivityView removeFromSuperview];
-                             objc_setAssociatedObject (self, &CSToastActivityViewKey, nil, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-                         }];
+            existingActivityView.alpha = 0.0;
+        } completion:^(BOOL finished) {
+            [existingActivityView removeFromSuperview];
+            objc_setAssociatedObject (self, &CSToastActivityViewKey, nil, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+        }];
     }
 }
 
@@ -416,18 +436,26 @@ static const NSString * CSToastQueueKey             = @"CSToastQueueKey";
 - (CGPoint)cs_centerPointForPosition:(id)point withToast:(UIView *)toast {
     CSToastStyle *style = [CSToastManager sharedStyle];
     
+    UIEdgeInsets safeInsets = UIEdgeInsetsZero;
+    if (@available(iOS 11.0, *)) {
+        safeInsets = self.safeAreaInsets;
+    }
+    
+    CGFloat topPadding = style.verticalPadding + safeInsets.top;
+    CGFloat bottomPadding = style.verticalPadding + safeInsets.bottom;
+    
     if([point isKindOfClass:[NSString class]]) {
         if([point caseInsensitiveCompare:CSToastPositionTop] == NSOrderedSame) {
-            return CGPointMake(self.bounds.size.width/2, (toast.frame.size.height / 2) + style.verticalPadding);
+            return CGPointMake(self.bounds.size.width / 2.0, (toast.frame.size.height / 2.0) + topPadding);
         } else if([point caseInsensitiveCompare:CSToastPositionCenter] == NSOrderedSame) {
-            return CGPointMake(self.bounds.size.width / 2, self.bounds.size.height / 2);
+            return CGPointMake(self.bounds.size.width / 2.0, self.bounds.size.height / 2.0);
         }
     } else if ([point isKindOfClass:[NSValue class]]) {
         return [point CGPointValue];
     }
     
     // default to bottom
-    return CGPointMake(self.bounds.size.width/2, (self.bounds.size.height - (toast.frame.size.height / 2)) - style.verticalPadding);
+    return CGPointMake(self.bounds.size.width / 2.0, (self.bounds.size.height - (toast.frame.size.height / 2.0)) - bottomPadding);
 }
 
 @end
@@ -507,9 +535,9 @@ static const NSString * CSToastQueueKey             = @"CSToastQueueKey";
     if (self) {
         self.sharedStyle = [[CSToastStyle alloc] initWithDefaultStyle];
         self.tapToDismissEnabled = YES;
-        self.queueEnabled = YES;
-        self.defaultDuration = 1.0;
-        self.defaultPosition = CSToastPositionCenter;
+        self.queueEnabled = NO;
+        self.defaultDuration = 3.0;
+        self.defaultPosition = CSToastPositionBottom;
     }
     return self;
 }

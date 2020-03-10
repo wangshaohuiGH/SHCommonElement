@@ -43,5 +43,5 @@
 /// 适配暗黑模式颜色   颜色传入的是16进制字符串
 /// @param lightColor 普通模式颜色
 /// @param darkColor 暗黑模式颜色
-+ (UIColor *)colorWithLightColorStr:(NSString *)lightColor DarkColor:(NSString *)darkColor;
++ (UIColor *)sh_colorWithLightColorString:(NSString *)lightColor DarkColorString:(NSString *)darkColor;
 @end

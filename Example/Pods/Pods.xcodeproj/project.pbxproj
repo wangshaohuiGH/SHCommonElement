@@ -10,6 +10,8 @@
 		09B2C04E0D39F43C3358373382FF0166 /* NSData+SHAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 854D089D04AC1709D89A5731ECEA2DFF /* NSData+SHAdd.m */; };
 		0CE4690C560BDF6E38A3652B2C826149 /* NSMutableArray+SHAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 79F2370DA18D79C970F9F6638B23ED67 /* NSMutableArray+SHAdd.m */; };
 		0D82EBAFADED101179F7C8224C9B1D46 /* Pods-SHCommonElement_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FFB91C577210D8BD2D47BDB4242BA73E /* Pods-SHCommonElement_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0E4B03C124178091000BFD3A /* NSLayoutConstraint+IBDesignable.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E4B03BF24178090000BFD3A /* NSLayoutConstraint+IBDesignable.h */; };
+		0E4B03C224178091000BFD3A /* NSLayoutConstraint+IBDesignable.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4B03C024178091000BFD3A /* NSLayoutConstraint+IBDesignable.m */; };
 		177A664F517FBF84BB3F85054FCA8DAF /* SHCommonElement-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B2723D5FC2E54FBB1381E0594A3F95DD /* SHCommonElement-dummy.m */; };
 		256723757A73D07122EE89441B4BAABC /* UIImage+HTRoundImage.h in Headers */ = {isa = PBXBuildFile; fileRef = F876E4A95BE6DF309DCDDFE75D6EFF01 /* UIImage+HTRoundImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4400536649C552531914E25FAFBF877A /* UIImageView+HTRoundImage.m in Sources */ = {isa = PBXBuildFile; fileRef = E47EBCBD46601DAE5BCEE3ADD9A278FA /* UIImageView+HTRoundImage.m */; };
@@ -94,7 +96,9 @@
 		02F696082C6E0F5F9DB6AA94CEA713D1 /* UIColor+SH_HexRGB.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+SH_HexRGB.h"; path = "SHCommonElement/Classes/UIColor+SH_HexRGB.h"; sourceTree = "<group>"; };
 		065B2A75DB027038DD67A9FC0E6A929B /* NSString+SHAdd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+SHAdd.h"; path = "SHCommonElement/Classes/NSString+SHAdd.h"; sourceTree = "<group>"; };
 		06F05FA4E52F0B1C34EEB27E7FD7BA6A /* WKWebView+SHAdd.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "WKWebView+SHAdd.m"; path = "SHCommonElement/Classes/WKWebView+SHAdd.m"; sourceTree = "<group>"; };
-		0DD8DF1308178B176621009D2DAABA98 /* SHCommonElement.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SHCommonElement.framework; path = SHCommonElement.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0DD8DF1308178B176621009D2DAABA98 /* SHCommonElement.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SHCommonElement.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E4B03BF24178090000BFD3A /* NSLayoutConstraint+IBDesignable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+IBDesignable.h"; path = "SHCommonElement/Classes/NSLayoutConstraint+IBDesignable.h"; sourceTree = "<group>"; };
+		0E4B03C024178091000BFD3A /* NSLayoutConstraint+IBDesignable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+IBDesignable.m"; path = "SHCommonElement/Classes/NSLayoutConstraint+IBDesignable.m"; sourceTree = "<group>"; };
 		12D8650231D71F1F7FDB36DBCC309213 /* UIView+SH_Toast.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+SH_Toast.m"; path = "SHCommonElement/Classes/UIView+SH_Toast.m"; sourceTree = "<group>"; };
 		15990A9110B9D9212DAEE12ACF8DD64D /* NSObject+SHAdd.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+SHAdd.m"; path = "SHCommonElement/Classes/NSObject+SHAdd.m"; sourceTree = "<group>"; };
 		21A73BB2B513CBB5714BAE3D0CC2EB70 /* UIButton+SHAdd.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+SHAdd.m"; path = "SHCommonElement/Classes/UIButton+SHAdd.m"; sourceTree = "<group>"; };
@@ -103,7 +107,7 @@
 		25A6B3A3866A069680810BD37518BFF2 /* NSDate+SHAdd.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDate+SHAdd.m"; path = "SHCommonElement/Classes/NSDate+SHAdd.m"; sourceTree = "<group>"; };
 		26A01135C8D9D78C3CA95FB49ABFF65F /* UIView+SH_Toast.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+SH_Toast.h"; path = "SHCommonElement/Classes/UIView+SH_Toast.h"; sourceTree = "<group>"; };
 		27ED3DBDE2837DB5235DEEECA3F92630 /* UIView+SHExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+SHExtension.m"; path = "SHCommonElement/Classes/UIView+SHExtension.m"; sourceTree = "<group>"; };
-		2A249CA16D069096ACD968AED2EF9BB1 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		2A249CA16D069096ACD968AED2EF9BB1 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		35211F1E821B7E971A08368C7E50719D /* CommonElement.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CommonElement.h; path = SHCommonElement/Classes/CommonElement.h; sourceTree = "<group>"; };
 		3B10D70E44A08DB0A75AB7A0ECD8BCFB /* UIFont+SHAdd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIFont+SHAdd.h"; path = "SHCommonElement/Classes/UIFont+SHAdd.h"; sourceTree = "<group>"; };
 		40CB39E715FBCDAA142E6513E126200A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -122,13 +126,13 @@
 		6C11025221D1B31775BC1892519DB956 /* NSDictionary+SHAdd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+SHAdd.h"; path = "SHCommonElement/Classes/NSDictionary+SHAdd.h"; sourceTree = "<group>"; };
 		6E6C0C34211EE3FA5F4B81A9B554010C /* UIView+SHExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+SHExtension.h"; path = "SHCommonElement/Classes/UIView+SHExtension.h"; sourceTree = "<group>"; };
 		714A72FFCDCF7BDAB320B559CD4642FF /* NSDictionary+SHAdd.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+SHAdd.m"; path = "SHCommonElement/Classes/NSDictionary+SHAdd.m"; sourceTree = "<group>"; };
-		717D73A40F7453B6C76D418588EF6C0A /* Pods_SHCommonElement_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SHCommonElement_Example.framework; path = "Pods-SHCommonElement_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		717D73A40F7453B6C76D418588EF6C0A /* Pods_SHCommonElement_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SHCommonElement_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77DF5EB8A5DADE568988049D7E2E742F /* CommonUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CommonUtils.h; path = SHCommonElement/Classes/CommonUtils.h; sourceTree = "<group>"; };
 		789BFF21C31BA4C8B84F69E51226F0D5 /* NSNumber+SHAdd.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+SHAdd.m"; path = "SHCommonElement/Classes/NSNumber+SHAdd.m"; sourceTree = "<group>"; };
 		79F2370DA18D79C970F9F6638B23ED67 /* NSMutableArray+SHAdd.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+SHAdd.m"; path = "SHCommonElement/Classes/NSMutableArray+SHAdd.m"; sourceTree = "<group>"; };
 		816D3836D4144F60794DF0BB682FE142 /* NSString+SHVerify.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+SHVerify.h"; path = "SHCommonElement/Classes/NSString+SHVerify.h"; sourceTree = "<group>"; };
 		81F76D4787BF4C4CD0004534F1408007 /* NSDecimalNumber+SHAdd.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDecimalNumber+SHAdd.m"; path = "SHCommonElement/Classes/NSDecimalNumber+SHAdd.m"; sourceTree = "<group>"; };
-		82402E0B37FCE25643A3C8DF87092E99 /* Pods_SHCommonElement_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SHCommonElement_Tests.framework; path = "Pods-SHCommonElement_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		82402E0B37FCE25643A3C8DF87092E99 /* Pods_SHCommonElement_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SHCommonElement_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D89CAC735AFB555F4F1A0ED07EB8E9 /* SHCommonElement.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SHCommonElement.modulemap; sourceTree = "<group>"; };
 		854D089D04AC1709D89A5731ECEA2DFF /* NSData+SHAdd.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSData+SHAdd.m"; path = "SHCommonElement/Classes/NSData+SHAdd.m"; sourceTree = "<group>"; };
 		85A74F9011A0E5BF7E069A22ACB4FE54 /* UIGestureRecognizer+SHAdd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIGestureRecognizer+SHAdd.h"; path = "SHCommonElement/Classes/UIGestureRecognizer+SHAdd.h"; sourceTree = "<group>"; };
@@ -141,7 +145,7 @@
 		97A98D6F57E1BED02EF162DC21C2A439 /* UIImage+SHAdd.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+SHAdd.m"; path = "SHCommonElement/Classes/UIImage+SHAdd.m"; sourceTree = "<group>"; };
 		9950FB3E7BE515947039EDAA9F725273 /* UIImage+HTRoundImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+HTRoundImage.m"; path = "SHCommonElement/Classes/UIImage+HTRoundImage.m"; sourceTree = "<group>"; };
 		9998F50162735F7319AFD6304DD91C8A /* NSString+SHAdd.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+SHAdd.m"; path = "SHCommonElement/Classes/NSString+SHAdd.m"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9EBD5DBD8BA886A03ACEF61C6369ED24 /* NSString+SHVerify.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+SHVerify.m"; path = "SHCommonElement/Classes/NSString+SHVerify.m"; sourceTree = "<group>"; };
 		A40BFA2907B544E8776995BEA5F630EC /* NSMutableArray+SHAdd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+SHAdd.h"; path = "SHCommonElement/Classes/NSMutableArray+SHAdd.h"; sourceTree = "<group>"; };
 		A4CB335E794A27935F3F68C0F692CEFB /* NSNumber+SHAdd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSNumber+SHAdd.h"; path = "SHCommonElement/Classes/NSNumber+SHAdd.h"; sourceTree = "<group>"; };
@@ -157,7 +161,7 @@
 		C1E8F3A7502D06EE912223E91B5B7C55 /* NSMutableDictionary+SHAdd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSMutableDictionary+SHAdd.h"; path = "SHCommonElement/Classes/NSMutableDictionary+SHAdd.h"; sourceTree = "<group>"; };
 		C313BAA42E612C797AB0B7DE2770CCF1 /* Pods-SHCommonElement_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SHCommonElement_Example-frameworks.sh"; sourceTree = "<group>"; };
 		CD893DCC6CC6417D74FFB970E23995D2 /* Pods-SHCommonElement_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SHCommonElement_Example.modulemap"; sourceTree = "<group>"; };
-		CF459D92A2C214378BCADE69E6FB183B /* SHCommonElement.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = SHCommonElement.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		CF459D92A2C214378BCADE69E6FB183B /* SHCommonElement.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = SHCommonElement.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		D1112DE34BC2A4F17A3256CF2777DD84 /* NSNotificationCenter+SHAdd.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSNotificationCenter+SHAdd.m"; path = "SHCommonElement/Classes/NSNotificationCenter+SHAdd.m"; sourceTree = "<group>"; };
 		E22BD8B66F7755E5309D0DEF3A8302FF /* NSData+SHAdd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSData+SHAdd.h"; path = "SHCommonElement/Classes/NSData+SHAdd.h"; sourceTree = "<group>"; };
 		E47EBCBD46601DAE5BCEE3ADD9A278FA /* UIImageView+HTRoundImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+HTRoundImage.m"; path = "SHCommonElement/Classes/UIImageView+HTRoundImage.m"; sourceTree = "<group>"; };
@@ -170,7 +174,7 @@
 		EDE6C85D049C509FC70772BCE9E97409 /* SHWebViewProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SHWebViewProtocol.h; path = SHCommonElement/Classes/SHWebViewProtocol.h; sourceTree = "<group>"; };
 		EF4B6FDE72DBD9EF422FE018001358E6 /* NSArray+SHAdd.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+SHAdd.m"; path = "SHCommonElement/Classes/NSArray+SHAdd.m"; sourceTree = "<group>"; };
 		EF91F1666B5BF786FDACA7025E5F6759 /* Pods-SHCommonElement_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SHCommonElement_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		F009CA1BC8A43AB4462D8A7D7D75A920 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		F009CA1BC8A43AB4462D8A7D7D75A920 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		F6C6D00C567D1E50A3C24523DD73CE81 /* Pods-SHCommonElement_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SHCommonElement_Tests-umbrella.h"; sourceTree = "<group>"; };
 		F876E4A95BE6DF309DCDDFE75D6EFF01 /* UIImage+HTRoundImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+HTRoundImage.h"; path = "SHCommonElement/Classes/UIImage+HTRoundImage.h"; sourceTree = "<group>"; };
 		F8ADE4501F172F129C9937224BD7F00D /* UIViewController+SHImagePicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+SHImagePicker.m"; path = "SHCommonElement/Classes/UIViewController+SHImagePicker.m"; sourceTree = "<group>"; };
@@ -271,6 +275,8 @@
 				D1112DE34BC2A4F17A3256CF2777DD84 /* NSNotificationCenter+SHAdd.m */,
 				A4CB335E794A27935F3F68C0F692CEFB /* NSNumber+SHAdd.h */,
 				789BFF21C31BA4C8B84F69E51226F0D5 /* NSNumber+SHAdd.m */,
+				0E4B03BF24178090000BFD3A /* NSLayoutConstraint+IBDesignable.h */,
+				0E4B03C024178091000BFD3A /* NSLayoutConstraint+IBDesignable.m */,
 				682FFAA33794F43A9E3A7212DD957815 /* NSObject+SHAdd.h */,
 				15990A9110B9D9212DAEE12ACF8DD64D /* NSObject+SHAdd.m */,
 				065B2A75DB027038DD67A9FC0E6A929B /* NSString+SHAdd.h */,
@@ -413,6 +419,7 @@
 				67ABA57F3A535890825C5878E43D7388 /* SHCommonElement-umbrella.h in Headers */,
 				65ED4A3DFB1F914F1CF4A4AEC56058D4 /* SHWebViewProtocol.h in Headers */,
 				5EE8AAF4F3A457DD4BDD42E5BB3A29EA /* UIButton+SHAdd.h in Headers */,
+				0E4B03C124178091000BFD3A /* NSLayoutConstraint+IBDesignable.h in Headers */,
 				6E8558F072608E694D9DD2BECA26FDAE /* UIColor+SH_HexRGB.h in Headers */,
 				6774DCE2F61CE94F2C2281DB643B0EA0 /* UIFont+SHAdd.h in Headers */,
 				67A8D363613B419463712D6E35909AF5 /* UIGestureRecognizer+SHAdd.h in Headers */,
@@ -509,6 +516,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
@@ -583,6 +591,7 @@
 				62580ED4215BEB33E09CEBBDA6967C18 /* UIView+SH_Toast.m in Sources */,
 				F5A14DEA23C7D30BAEBE94681BE85347 /* UIView+SHBadgeView.m in Sources */,
 				DF47910741AC8E21EF116A02535FC222 /* UIView+SHExtension.m in Sources */,
+				0E4B03C224178091000BFD3A /* NSLayoutConstraint+IBDesignable.m in Sources */,
 				A66AF9B256D00A6157E604ACEC40D9F1 /* UIView+SHGetController.m in Sources */,
 				A201E8E5DB890D0DE6B6CA107D8172C2 /* UIViewController+SHImagePicker.m in Sources */,
 				AFA9DEFA651306DECF88C5BBF1AF2B84 /* WKWebView+SHAdd.m in Sources */,
@@ -927,8 +936,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};

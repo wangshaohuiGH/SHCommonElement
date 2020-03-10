@@ -396,7 +396,7 @@ extern const NSString * CSToastPositionBottom;
  toast views will appear one after the other. When `NO`, multiple Toast
  views will appear at the same time (potentially overlapping depending
  on their positions). This has no effect on the toast activity view,
- which operates independently of normal toast views. Default is `NO`.
+ which operates independently of normal toast views. Default is `YES`.
  
  @param queueEnabled YES or NO
  */
@@ -404,7 +404,7 @@ extern const NSString * CSToastPositionBottom;
 
 /**
  Returns `YES` if the queue is enabled, otherwise `NO`.
- Default is `NO`.
+ Default is `YES`.
  
  @return BOOL
  */
@@ -413,14 +413,14 @@ extern const NSString * CSToastPositionBottom;
 /**
  Sets the default duration. Used for the `makeToast:` and
  `showToast:` methods that don't require an explicit duration.
- Default is 3.0.
+ Default is 2.0.
  
  @param duration The toast duration
  */
 + (void)setDefaultDuration:(NSTimeInterval)duration;
 
 /**
- Returns the default duration. Default is 3.0.
+ Returns the default duration. Default is 2.0.
  
  @return duration The toast duration
 */
@@ -437,11 +437,12 @@ extern const NSString * CSToastPositionBottom;
 + (void)setDefaultPosition:(id)position;
 
 /**
- Returns the default toast position. Default is `CSToastPositionBottom`.
+ Returns the default toast position. Default is `CSToastPositionCenter`.
  
  @return position The default center point. Will be one of the predefined
  CSToastPosition constants or a `CGPoint` wrapped in an `NSValue` object.
  */
 + (id)defaultPosition;
+
 
 @end

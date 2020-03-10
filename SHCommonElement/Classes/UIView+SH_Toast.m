@@ -477,8 +477,8 @@ static const NSString * CSToastQueueKey             = @"CSToastQueueKey";
         self.cornerRadius = 10.0;
         self.titleFont = [UIFont boldSystemFontOfSize:16.0];
         self.messageFont = [UIFont systemFontOfSize:16.0];
-        self.titleAlignment = NSTextAlignmentLeft;
-        self.messageAlignment = NSTextAlignmentLeft;
+        self.titleAlignment = NSTextAlignmentCenter;
+        self.messageAlignment = NSTextAlignmentCenter;
         self.titleNumberOfLines = 0;
         self.messageNumberOfLines = 0;
         self.displayShadow = NO;
@@ -535,9 +535,9 @@ static const NSString * CSToastQueueKey             = @"CSToastQueueKey";
     if (self) {
         self.sharedStyle = [[CSToastStyle alloc] initWithDefaultStyle];
         self.tapToDismissEnabled = YES;
-        self.queueEnabled = NO;
-        self.defaultDuration = 3.0;
-        self.defaultPosition = CSToastPositionBottom;
+        self.queueEnabled = YES;
+        self.defaultDuration = 2.0;
+        self.defaultPosition = CSToastPositionCenter;
     }
     return self;
 }
@@ -585,5 +585,6 @@ static const NSString * CSToastQueueKey             = @"CSToastQueueKey";
 + (id)defaultPosition {
     return [[self sharedManager] defaultPosition];
 }
+
 
 @end

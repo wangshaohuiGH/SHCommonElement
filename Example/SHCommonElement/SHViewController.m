@@ -27,6 +27,9 @@
     button.sh_badgeView.badgeValue = 9;
     [button addTarget:self action:@selector(click) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
+    UIColor *color = [UIColor sh_colorWithLightColorString:@"666666" DarkColorString:@"ffffff"];
+    NSLog(@"%@",color);
+    NSLog(@"%@",[self getCurrentViewController]);
 	// Do any additional setup after loading the view, typically from a nib.
 }
 - (void)click {

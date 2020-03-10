@@ -716,5 +716,43 @@
     return YES;
 }
 
+- (UIViewController *)getCurrentViewController {
+    UIViewController *rootViewController = [UIApplication sharedApplication].keyWindow.rootViewController;
+    UIViewController *currentVC = [self getCurrentVCFrom:rootViewController];
+    NSLog(@"当前控制器为:%@",currentVC);
+    return currentVC;
+}
 
+
+- (UIViewController *)getCurrentVCFrom:(UIViewController *)rootVC {
+    UIViewController *currentVC;
+    //NSLog(@"%@",rootVC);
+    if ([rootVC presentedViewController]) {
+        // 视图是被presented出来的
+        
+        rootVC = [self getCurrentVCFrom:rootVC.presentedViewController];
+        //NSLog(@"%@",rootVC);
+        
+    }
+    if ([rootVC isKindOfClass:[UITabBarController class]]) {
+        // 根视图为UITabBarController
+        
+        currentVC = [self getCurrentVCFrom:[(UITabBarController *)rootVC selectedViewController]];
+        //NSLog(@"%@",currentVC);
+        
+    } else if ([rootVC isKindOfClass:[UINavigationController class]]){
+        // 根视图为UINavigationController
+        
+        currentVC = [self getCurrentVCFrom:[(UINavigationController *)rootVC visibleViewController]];
+        //NSLog(@"%@",currentVC);
+        
+    } else {
+        // 根视图为非导航类
+        
+        currentVC = rootVC;
+        //NSLog(@"%@",currentVC);
+        
+    }
+    return currentVC;
+}
 @end

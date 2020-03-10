@@ -35,4 +35,13 @@
                          green:(CGFloat)green
                           blue:(CGFloat)blue;
 
+/// 适配暗黑模式颜色   传入的UIColor对象
+/// @param lightColor 普通模式颜色
+/// @param darkColor 暗黑模式颜色
++ (UIColor *)colorWithLightColor:(UIColor *)lightColor DarkColor:(UIColor *)darkColor;
+
+/// 适配暗黑模式颜色   颜色传入的是16进制字符串
+/// @param lightColor 普通模式颜色
+/// @param darkColor 暗黑模式颜色
++ (UIColor *)colorWithLightColorStr:(NSString *)lightColor DarkColor:(NSString *)darkColor;
 @end

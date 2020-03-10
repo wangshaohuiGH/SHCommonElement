@@ -47,7 +47,12 @@
 /** 根据iPhone8进行比例缩放 */
 #define kFitScaleW(width) (width*kScreenW/375)
 
-#define kFitScaleH(height) (height*kScreenH/667)
+#define tempH (iPhoneX ? kScreenH-44-34:kScreenH)
+
+#define kFitScaleH(height) (height*tempH/667)
+
+///适配暗黑模式   lightColor：白天模式颜色  darkColor：暗黑模式颜色
+#define KCustomAdjustColor(lightColor, darkColor) [UIColor colorWithLightColor:lightColor DarkColor:darkColor]
 
 /** 状态栏高度 */
 #define kStatusBarH CGRectGetHeight([UIApplication sharedApplication].statusBarFrame)

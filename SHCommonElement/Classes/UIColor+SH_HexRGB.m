@@ -221,6 +221,26 @@ CGFloat colorComponentFrom(NSString *string, NSUInteger start, NSUInteger length
 }
 
 
-
-
+/// 适配暗黑模式颜色   传入的UIColor对象
+/// @param lightColor 普通模式颜色
+/// @param darkColor 暗黑模式颜色
++ (UIColor *)colorWithLightColor:(UIColor *)lightColor DarkColor:(UIColor *)darkColor {
+    if (@available(iOS 13.0, *)) {
+        return [UIColor colorWithDynamicProvider:^UIColor * _Nonnull(UITraitCollection * _Nonnull trainCollection) {
+            if ([trainCollection userInterfaceStyle] == UIUserInterfaceStyleLight) {
+                return lightColor;
+            } else {
+                return darkColor;
+            }
+        }];
+    } else {
+        return lightColor ? lightColor : (darkColor ? darkColor : [UIColor clearColor]);
+    }
+}
+/// 适配暗黑模式颜色   颜色传入的是16进制字符串
+/// @param lightColor 普通模式颜色
+/// @param darkColor 暗黑模式颜色
++ (UIColor *)colorWithLightColorStr:(NSString *)lightColor DarkColor:(NSString *)darkColor{
+    return [UIColor colorWithLightColor:[UIColor sh_colorWithHexString:lightColor] DarkColor:[UIColor sh_colorWithHexString:darkColor]];
+}
 @end

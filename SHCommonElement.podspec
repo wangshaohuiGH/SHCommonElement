@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.name             = 'SHCommonElement'
   #库版本
 
-  s.version          = '0.1.8'
+  s.version          = '0.1.9'
 
   #库简短描述
   s.summary          = 'SHCommonElement pod Use'

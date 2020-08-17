@@ -34,9 +34,9 @@
 + (UIFont *)sh_mainFontWithName:(NSString *)name Size:(CGFloat )size {
     CGFloat w = [UIScreen mainScreen].bounds.size.width;
     if (w == 414) {
-        size = size + 1;
+        size = size + 0.5;
     }else if (w == 320) {
-        size = size - 1;
+        size = size;
     }
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 9.0) {
         UIFont *font = [UIFont fontWithName:name size:size];

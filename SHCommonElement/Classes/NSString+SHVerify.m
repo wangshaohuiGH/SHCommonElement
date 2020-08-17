@@ -206,7 +206,8 @@
 //网址判断
 - (BOOL)isValidateUrl
 {
-    NSString *regex =@"[a-zA-z]+://[^\\s]*";
+    //[a-zA-z]+://[^\\s]*
+    NSString *regex = @"(http|https)://((\\w)*|([0-9]*)|([-|_])*)+\\.(.)+";
     NSPredicate *urlTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",regex];
     return [urlTest evaluateWithObject:self];
 }

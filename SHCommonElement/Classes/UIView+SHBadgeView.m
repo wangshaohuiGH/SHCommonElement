@@ -51,7 +51,13 @@
 {
     if(_badgeValue != 0 || _displayIfZero) {
         
-        NSString *stringToDraw = [NSString stringWithFormat:@"%ld", (long)_badgeValue];
+        NSString *stringToDraw  = nil;
+        if (_badgeValue > 99) {
+            stringToDraw = @"99+";
+        }else {
+            stringToDraw = [NSString stringWithFormat:@"%ld", (long)_badgeValue];
+        }
+        
         
         CGRect pathRect = CGRectInset(rect, _outlineWidth/2.f, _outlineWidth/2.f);
         
